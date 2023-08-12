@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "435764793377",
+    "project_id": "veggiez",
+    "storage_bucket": "veggiez.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:435764793377:android:7aae965ed0fcb833df9360",
+        "android_client_info": {
+          "package_name": "com.example.veggiez"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "435764793377-l16u2a8mlessvi76vhmdisr7udgi1t24.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.veggiez",
+            "certificate_hash": "5e8f16062ea3cd2c4a0d547876baa6f38cabf625"
+          }
+        },
+        {
+          "client_id": "435764793377-idlag0jpr8fb4hobs638ti585lge1hgn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA26a_N6fuutJEoDvs8waeYcp9Pvfetzac"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "435764793377-idlag0jpr8fb4hobs638ti585lge1hgn.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

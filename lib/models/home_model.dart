@@ -1,11 +1,8 @@
-import 'package:flutter/material.dart';
-
 class HomeModel {
   bool? status;
   DataHomeModel? data;
 
   //List<DataHomeModel> =[];
-
 }
 
 class DataHomeModel {

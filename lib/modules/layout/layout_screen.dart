@@ -3,8 +3,6 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:dot_navigation_bar/dot_navigation_bar.dart';
 import 'package:veggiez/style/colors.dart';
 import 'package:veggiez/style/icon_broken.dart';
-import 'package:veggiez/style/veggiez_icons.dart';
-
 import 'app_cubit/cubit.dart';
 import 'app_cubit/states.dart';
 
@@ -57,17 +55,29 @@ class LayoutScreen extends StatelessWidget {
               ],
             ),
             body: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 14.0,vertical: 5.0,),
+              padding: const EdgeInsets.symmetric(
+                horizontal: 14.0,
+                vertical: 5.0,
+              ),
               child: Column(
                 children: [
                   if (cubit.currentIndex == 0)
                     Row(
                       children: [
                         Icon(
-                          IconBroken.Location,color: defaultColor,
+                          IconBroken.Location,
+                          color: defaultColor,
                         ),
-                        SizedBox(width: 3,),
-                        Text('Egypt, Minya',style: TextStyle(fontSize: 20,fontWeight: FontWeight.w400,),),
+                        SizedBox(
+                          width: 3,
+                        ),
+                        Text(
+                          'Egypt, Minya',
+                          style: TextStyle(
+                            fontSize: 20,
+                            fontWeight: FontWeight.w400,
+                          ),
+                        ),
                       ],
                     ),
                   cubit.appScreens[cubit.currentIndex],

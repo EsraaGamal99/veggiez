@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 import 'package:veggiez/shared/componentes/components.dart';
 import 'package:veggiez/shared/network/local/cache_helper.dart';
 import 'package:veggiez/style/colors.dart';
@@ -86,7 +85,10 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
               ),
             ),
 
-            defaultIndicator(controller: boardController, count: board.length,),
+            defaultIndicator(
+              controller: boardController,
+              count: board.length,
+            ),
             SizedBox(
               height: 15.0,
             ),
@@ -104,7 +106,6 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
               text: 'next',
               textColor: defaultColor,
               backgroundColor: secondColor,
-
             ),
           ],
         ),

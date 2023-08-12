@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 import 'package:veggiez/style/colors.dart';
 
@@ -32,13 +33,19 @@ Widget defaultFormField({
         ),
         suffixIcon: suffix != null
             ? IconButton(
-          onPressed: suffixPressed,
-          icon: Icon(
-            suffix,
-          ),
-        )
+                onPressed: suffixPressed,
+                icon: Icon(
+                  suffix,
+                ),
+              )
             : null,
-        border: OutlineInputBorder(borderRadius: BorderRadius.all(Radius.circular(8.0,),),),
+        border: OutlineInputBorder(
+          borderRadius: BorderRadius.all(
+            Radius.circular(
+              8.0,
+            ),
+          ),
+        ),
       ),
     );
 
@@ -51,15 +58,17 @@ Widget defaultTextButton({
     TextButton(
       onPressed: onPressed,
       child: Text(
-        isUpperCase?text.toUpperCase():text,
-        style: TextStyle(color: color,),
+        isUpperCase ? text.toUpperCase() : text,
+        style: TextStyle(
+          color: color,
+        ),
       ),
     );
 
 Widget defaultButton({
   required void Function()? onPressed,
   required String text,
-  Color? textColor =Colors.white,
+  Color? textColor = Colors.white,
   double Width = 328,
   double height = 59.2,
   Color? backgroundColor = defaultColor,
@@ -102,28 +111,44 @@ void navigateAndFinish(context, widget) {
       MaterialPageRoute(
         builder: (context) => widget,
       ),
-          (route) => false);
+      (route) => false);
 }
 
 SmoothPageIndicator defaultIndicator({
   required controller,
-  required count,
-}) => SmoothPageIndicator(
-  controller: controller,
-  count: count.length,
-  effect: CustomizableEffect(
-    dotDecoration:
-    DotDecoration(
-      color: Color(0xFFE1DEDE),
-      width: 8,
-      height: 8,
-      borderRadius: BorderRadius.circular(4.0,),
-    ),
-    activeDotDecoration: DotDecoration(
-      color: defaultMaterialColor,
-      height: 8,
-      width: 24,
-      borderRadius: BorderRadius.circular(8,),
-    ),
-  ),
-);
+  required dynamic count,
+}) =>
+    SmoothPageIndicator(
+      controller: controller,
+      count: count,
+      effect: CustomizableEffect(
+        dotDecoration: DotDecoration(
+          color: Color(0xFFE1DEDE),
+          width: 8,
+          height: 8,
+          borderRadius: BorderRadius.circular(
+            4.0,
+          ),
+        ),
+        activeDotDecoration: DotDecoration(
+          color: defaultMaterialColor,
+          height: 8,
+          width: 24,
+          borderRadius: BorderRadius.circular(
+            8,
+          ),
+        ),
+      ),
+    );
+
+void showToast({required String msg, required color}) {
+  Fluttertoast.showToast(
+    msg: msg,
+    toastLength: Toast.LENGTH_LONG,
+    gravity: ToastGravity.BOTTOM,
+    timeInSecForIosWeb: 5,
+    backgroundColor: color,
+    textColor: Colors.white,
+    fontSize: 16.0,
+  );
+}

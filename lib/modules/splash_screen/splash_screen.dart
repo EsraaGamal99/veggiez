@@ -16,7 +16,6 @@ class _SplashScreenState extends State<SplashScreen> {
       Navigator.pushReplacement(
           context, MaterialPageRoute(builder: (context) => SignUpScreen()));
     });
-    // TODO: implement initState
     super.initState();
   }
 
@@ -28,7 +27,7 @@ class _SplashScreenState extends State<SplashScreen> {
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           Padding(
-            padding:  EdgeInsets.symmetric(horizontal: 34.7222.w),
+            padding: EdgeInsets.symmetric(horizontal: 34.7222.w),
             child: Image(
               image: AssetImage(
                 'assets/images/splash.png',
